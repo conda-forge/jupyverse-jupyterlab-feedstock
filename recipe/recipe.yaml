@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.0"
+  version: "0.1.1"
 
 package:
   name: jupyverse-jupyterlab
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupyverse-jupyterlab/jupyverse_jupyterlab-${{ version }}.tar.gz
-    sha256: 884f7f93c2024ccd92b8ef94bae383e8be786f52ed443aedecc6201f69577c1a
+    sha256: f53bd50289bdb984b712e6d0692626f57da0cf10f554a6e620e6d37b52ab0907
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - fastapi
+    - fastapi-core
     - fps
     - jupyverse-api >=0.15.0,<0.16.0
     - jupyverse-auth >=0.2.0,<0.3.0
